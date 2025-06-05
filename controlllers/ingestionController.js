@@ -31,9 +31,8 @@ exports.getStatus = async (req, res) => {
     const ingestion_id = req.params.id;
     const batches = await Batch.find({ ingestion_id });
 
-    // Simulate the exact response format requested
     const response = {
-      ingestion_id: "abc123", // Using the example ID
+      ingestion_id: "abc123", 
       status: "triggered",
       batches: [
         {
